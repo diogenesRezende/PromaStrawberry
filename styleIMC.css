@@ -1,0 +1,35 @@
+* {
+	margin:0px;
+	padding: 0px;
+}
+img {
+	width: 250px;
+	padding-left: 12px;
+	padding-top: 10px;
+}
+fieldset {
+	width: 250px;
+}
+
+
+div.campo, div.resultado {
+	display: block;
+	width: 75px;
+	margin: 3px 0;
+}
+
+legend {
+	color: #0bb;
+	font-size: 21px;
+	text-align: center;
+}
+a {
+	text-decoration: none;
+	font-size: 19px;
+	color: red;
+}
+body form,body section img{
+	position: relative;
+	
+	margin: 10px auto;
+}
