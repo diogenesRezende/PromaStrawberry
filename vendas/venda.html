@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Vendas</title>
+		<link type="text/css" rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<div id="form-venda">
+			<form id="form">
+				<fieldset>
+					<legend>
+						Realizar venda
+					</legend>
+
+					<fieldset>
+						<legend>Dados pessoais</legend>
+						<label>
+							<select id="listProdutor" required="required"></select>
+						</label>
+						<label>
+							<select id="listComprador" required="required"></select>
+						</label>
+						<input type="date" name="" value="" placeholder="" required="required">
+					</fieldset>
+					<fieldset>
+						<legend>Dados da Venda</legend>
+						<label>
+							Quantidade
+						<input type="number" name="" value="" placeholder="" min="1" max="999">
+						</label>
+						<label>
+							<select id="listVariedade"></select>
+						</label>
+					</fieldset>
+					<label>Nome:
+						<input type="text" id="nome" required="required" placeholder="Nome do Produtor"/>
+					</label>
+
+					<label>Cidade:
+						<input type="text" id="cidade" required="required" placeholder="Cidade"/>
+					</label>
+
+					<label>Bairro:
+						<input type="text" id="bairro" placeholder="Bairro"/>
+					</label>
+
+					<label>Rua:
+						<input type="text"  id="rua" placeholder="Rua"/>
+					</label>
+
+					<label>Número:
+						<input type="text" id="numero" placeholder="Número"/>
+					</label>
+
+					<label>Celular1:
+						<input type="text" id="celular" required="required" placeholder="Celular"/>
+					</label>
+
+					<label>Celular2:
+						<input type="text" id="celular2" placeholder="Celular2"/>
+					</label>
+
+					<input type="submit" value="Salvar" id="bt-salvar"/>
+					<input type="reset" value="Cancelar" id="bt-limpar"/>
+
+				</fieldset>
+
+			</form>
+
+		</div>
+
+		<div id="table-produtor">
+			<table id="tabela-produtores" class="tabela">
+		<caption>Gerenciar produtores</caption>
+		<thead>
+			<tr>
+				<th>Nome</th>
+				<th>Cidade</th>
+				<th>Bairro</th>
+				<th>Celular</th>
+				<th>Celular 2</th>
+				<th>Ações</th>
+			</tr>
+		</thead>
+		<tbody></tbody>
+	</table>
+		</div>
+
+		<script type="text/javascript" src="js/ProdutorDAO.js"></script>
+		<script type="text/javascript" src="js/TableController.js"></script>
+		<script type="text/javascript" src="js/Index.js"></script>
+	</body>
+</html>
