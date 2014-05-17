@@ -14,6 +14,7 @@ var VariedadeDAO = {
 		
 		if(index > -1) {
 			list[index] = variedade;
+			VariedadeDAO.serializeAndSave();
 			return VariedadeDAO.UPDATE;
 		}
 		else {
@@ -68,6 +69,7 @@ var VariedadeDAO = {
 
 		if (index > -1) {
 			list.splice(index, 1);
+			VariedadeDAO.serializeAndSave();
 			return true;
 		}
 
