@@ -1,0 +1,11 @@
+*{
+	margin:0;
+	paddin: 0;
+}
+a{
+	text-decoration: none;
+}
+#nav{
+	width: 510px;
+	margin:0 auto;
+}
