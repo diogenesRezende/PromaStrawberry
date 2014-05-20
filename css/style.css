@@ -1,11 +1,109 @@
-*{
-	margin:0;
-	paddin: 0;
+/*fazendo reset de margin e padding da pagina toda*/
+* {
+	margin: 0;
+	padding: 0;
 }
-a{
+/* definindo background para a página isso foi feito inicialmente nessa pagina
+ mas vai ser usado em todas as outras
+ */
+body {
+	background-image: url('img/selected.jpg');
+	background-size: 100%;
+	background-repeat: no-repeat;
+}
+/*propriedades do menu de navegação*/
+#nav {
+	width: 49%;
+	height: 60px;
+	margin: 12px auto;
+}
+/* retirando o sublinhado de todos os links do documento */
+a {
 	text-decoration: none;
 }
-#nav{
-	width: 510px;
+
+/*Aqui começa as propridades individuais das div que redirecionam
+ *  para outra paginas
+ */
+
+/*Propriedades da div compradores*/
+#div-compradores {
+	clear: both;
+	display: inline-block;
+}
+#div-compradores label {
+	display: block;
+	width: 60px;
 	margin: 0 auto;
 }
+#compradores {
+	background-image: url('img/icon_compradores.png');
+	width: 128px;
+	height: 128px;
+}
+
+/*Propriedades da div produtores*/
+#div-produtores {
+	clear: both;
+	display: inline-block;
+}
+#div-produtores label {
+	display: block;
+	width: 60px;
+	margin: 0 auto;
+}
+#produtores {
+	background-image: url('img/icon_produtores.png');
+	width: 128px;
+	height: 128px;
+}
+
+/*Propriedades da div variedades de morango*/
+
+#div-variedades {
+	clear: both;
+	display: inline-block;
+}
+#div-variedades label {
+	display: block;
+	width: 60px;
+	margin: 0 auto;
+}
+#variedades {
+	background-image: url('img/icon_variedades.png');
+	width: 128px;
+	height: 128px;
+}
+
+/*Propriedades da div custos*/
+#div-custos {
+	clear: both;
+	display: inline-block;
+}
+#div-custos label {
+	display: block;
+	width: 60px;
+	margin: 0 auto;
+}
+#custos {
+	background-image: url('img/icon_custos.png');
+	width: 128px;
+	height: 128px;
+}
+
+/*Propriedades da div relatórios*/
+#div-relatorios {
+	clear: both;
+	display: inline-block;
+}
+#div-relatorios label {
+	display: block;
+	width: 60px;
+	margin: 0 auto;
+}
+#relatorios {
+	background-image: url('img/icon_report.png');
+	width: 128px;
+	height: 128px;
+}
+/*FIM*/
