@@ -1,3 +1,6 @@
+/*fazendo imports da letras que serão usadas*/
+@import url(http://fonts.googleapis.com/css?family=Homenaje);
+
 /*fazendo reset de margin e padding da pagina toda*/
 * {
 	margin: 0;
@@ -7,19 +10,30 @@
  mas vai ser usado em todas as outras
  */
 body {
-	background-image: url('img/selected.jpg');
+	background-image: url('img/selected.gif');
 	background-size: 100%;
 	background-repeat: no-repeat;
+	font-family: 'Homenaje', sans-serif;
+	color: #1E90FF;
+}
+/*propriedades do cabeçalho*/
+#header{
+	width:100%;
+	height:20%;	
+	text-align: center;
+	background-image: url("img/header.gif");
+	background-size: 100%;
 }
 /*propriedades do menu de navegação*/
 #nav {
-	width: 49%;
-	height: 60px;
+	width: 51%;
+	
 	margin: 12px auto;
 }
 /* retirando o sublinhado de todos os links do documento */
 a {
 	text-decoration: none;
+	color: #1E90FF;
 }
 
 /*Aqui começa as propridades individuais das div que redirecionam
@@ -106,4 +120,9 @@ a {
 	width: 128px;
 	height: 128px;
 }
+.menu{
+	margin: 3px 3px 3px 3px;
+	
+}
+
 /*FIM*/
