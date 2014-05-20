@@ -1,73 +1,111 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Comprador</title>
-	<link rel="stylesheet" type="text/css" href="css/compradores.css" />
-	
-	
-</head>
-<body>
-	<form action="" id ="form" class="comprador-form">
-		<fieldset>
-			<legend>Cadastrar comprador</legend>
-			<label>
-				Nome
-				<input type="text" placeholder="Nome do comprador" id="nome" required="required">
-			</label>
-			<label>
-				Cidade
-				<input type="text" placeholder="Nome da cidade" id="cidade" required="required">
-			</label>
-			<label>
-				Bairro
-				<input type="text" id="bairro" placeholder="Nome do bairro">
-			</label>
-			<label>
-				Rua
-				<input type="text" id="rua" placeholder="Nome da rua">
-			</label>
-			<label>
-				nº
-				<input type="text" id="numero" name="" value="" placeholder="Número da residência">		
-			</label>
-			<label>
-				Celular
-				<input type="text" id="celular" name="" value="" placeholder="Celular" required="required">
-			</label>
-			<label>
-				Celular 2
-				<input type="text" id="celular2" placeholder="Celular 2 ">
-			</label>
-			<label>
-				Telefone
-				<input type="text" id="telefone" placeholder="Telefone">
-			</label>
-			<div class="botoes">
-				<input type="submit" name="" value="Salvar" id="salvar">
-				<input type="reset" name="" value="Cancelar" id="cancelar">
-			</div>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Comprador</title>
+		<link rel="stylesheet" type="text/css" href="css/compradores.css" />
 
-		</fieldset>
-	</form>
-	<table id="tabela-compradores" class="tabela">
-		<caption>Gerenciar compradores</caption>
-		<thead>
-			<tr>
-				<th>Nome</th>
-				<th>Cidade</th>
-				<th>Bairro</th>
-				<th>Telefone</th>
-				<th>Celular</th>
-				<th>Celular 2</th>
-				<th>Ações</th>
-			</tr>
-		</thead>
-		<tbody></tbody>
-	</table>
-	<script type="text/javascript" src="js/CompradorDAO.js"></script>
-	<script type="text/javascript" src="js/TableController.js"></script>
-	<script type="text/javascript" src = "js/Index.js"></script>
-</body>
+	</head>
+	<body>
+		<div id="header">
+			<h1>Proma Strawberry</h1>
+			<h2>Production Manager Strawberry</h2>
+		</div>
+
+		<form action="" id ="form" class="comprador-form">
+			<fieldset>
+
+				<legend>
+					Cadastrar comprador
+				</legend>
+
+				<label>
+					<p class="label">
+						Nome
+					</p>
+					<input type="text" placeholder="Nome do comprador" id="nome" required="required">
+				</label>
+
+				<label>
+					<p class="label">
+						Cidade
+					</p>
+					<input type="text" placeholder="Nome da cidade" id="cidade" required="required">
+				</label>
+
+				<label>
+					<p class="label">
+						Bairro
+					</p>
+					<input type="text" id="bairro" placeholder="Nome do bairro">
+				</label>
+
+				<label>
+					<p class="label">
+						Rua
+					</p>
+					<input type="text" id="rua" placeholder="Nome da rua">
+				</label>
+
+				<label>
+					<p class="label">
+						nº
+					</p>
+					<input type="text" id="numero" name="" value="" placeholder="Número da residência">
+				</label>
+
+				<label>
+					<p class="label">
+						Celular
+					</p>
+					<input type="text" id="celular" name="" value="" placeholder="xx-xxxx-xxxx" required="required">
+				</label>
+
+				<label>
+					<p class="label">
+						Celular 2
+					</p>
+					<input type="text" id="celular2" placeholder="Celular 2 ">
+				</label>
+
+				<label>
+					<p class="label">
+						Telefone
+					</p>
+					<input type="text" id="telefone" placeholder="Telefone">
+				</label>
+
+				<div class="botoes">
+					<input type="submit" name="" value="Salvar" id="salvar">
+					<input type="reset" name="" value="Cancelar" id="cancelar">
+				</div>
+
+			</fieldset>
+		</form>
+
+		<div id="table">
+			<table id="tabela-compradores" class="tabela">
+				<caption>
+					Gerenciar compradores
+				</caption>
+				<thead>
+					<tr>
+						<th>Nome</th>
+						<th>Cidade</th>
+						<th>Bairro</th>
+						<th>Telefone</th>
+						<th>Celular</th>
+						<th>Celular 2</th>
+						<th>Ações</th>
+					</tr>
+				</thead>
+				<tbody></tbody>
+			</table>
+		</div>
+
+		<script type="text/javascript" src="js/CompradorDAO.js"></script>
+		<script type="text/javascript" src="js/TableController.js"></script>
+		<script type="text/javascript" src = "js/Index.js"></script>
+	</body>
 </html>
