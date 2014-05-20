@@ -26,8 +26,7 @@ body {
 }
 /*propriedades do menu de navegação*/
 #nav {
-	width: 51%;
-	
+	width: 61%;	
 	margin: 12px auto;
 }
 /* retirando o sublinhado de todos os links do documento */
@@ -68,6 +67,22 @@ a {
 }
 #produtores {
 	background-image: url('img/icon_produtores.png');
+	width: 128px;
+	height: 128px;
+}
+
+/*Propriedades da div produtores*/
+#div-vendas {
+	clear: both;
+	display: inline-block;
+}
+#div-vendas label {
+	display: block;
+	width: 60px;
+	margin: 0 auto;
+}
+#vendas {
+	background-image: url('img/icon_vendas.png');
 	width: 128px;
 	height: 128px;
 }
