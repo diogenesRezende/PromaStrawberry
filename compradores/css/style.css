@@ -1,43 +1,9 @@
 * {
-  cursor: url(../../css/img/cursor.png),auto;
-  padding: 0px;
-  border: 0px;
+	cursor: url(../../css/img/cursor.png), auto;
+	padding: 0px;
+	border: 0;
 }
 
-/*
- * .btn-success {
- color: #ffffff;
- text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
- background-color: #5bb75b;
- border: 2px solid black;
- }
- .btn-success:hover, .btn-success:focus, .btn-success:active, .btn-success.active, .btn-success.disabled, .btn-success[disabled] {
- color: #ffffff;
- background-color: #51a351;
- *background-color: #499249;
- }
-
- .btn-success:active, .btn-success.active {
- background-color: #408140 \9;
- }
-
- .btn-danger {
- color: #ffffff;
- text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
- background-color: #da4f49;
- border: 1px solid black;
- }
-
- .btn-danger:hover, .btn-danger:focus, .btn-danger:active, .btn-danger.active, .btn-danger.disabled, .btn-danger[disabled] {
- color: #ffffff;
- background-color: #bd362f;
- *background-color: #a9302a;
- }
-
- .btn-danger:active, .btn-danger.active {
- background-color: #942a25 \9;
- }
- */
 /*fazendo imports da letras que serão usadas*/
 @import url(http://fonts.googleapis.com/css?family=Homenaje);
 
@@ -54,53 +20,109 @@ body {
 	background-size: 100%;
 	background-repeat: no-repeat;
 	font-family: 'Homenaje', sans-serif;
-	color: #1E90FF;
+	color: black;
+}
+a{
+	text-decoration: none;
+	color: black;
 }
 /*propriedades do cabeçalho*/
-#header{
-	width:100%;
-	height:20%;	
-	text-align: center;
+#header {
+	width: 100%;
+	height: 20%;
+	display: inline-block;
 	background-image: url("img/header.gif");
 	background-size: 100%;
 }
-
-#form{
-	width: 300px;
+#init {
 	clear: both;
-	float: left;
+	display: inline-block;
+	margin-left: 5px;
+}
+#title {
+	width: 94.5%;
+	display: inline-block;
+	text-align: center;
+}
+#init label {
+	display: block;
+}
+#init-img {
+	background-image: url('img/icon_init.png');
+	background-repeat: no-repeat;
+	width: 48px;
+	height: 48px;
+}
+
+#form {
+	width: 53%;
+	padding: 10px;
+	margin: 0 auto;
 }
 
 input[type=text] {
 	display: block;
 	margin: 0 auto;
 	width: 180px;
-	height: 25px;
 }
-legend{
+legend {
+	width: 180px;
 	text-align: center;
 }
-label{
+label {
 	width: 200px;
 }
-.label{
-	width:50px;
-	padding-top:10px;
+.dados {
+	width: 300px;
+	display: inline-block;
+	padding-top: 20px;
+	margin-left: 6.3px;
+}
+.label {
+	width: 60px;
 	margin: 0 auto;
 }
-input[type=submit],
-input[type=reset]{
+input[type=submit], input[type=reset] {
 	width: 60px;
 	margin-left: 10px;
 }
-.botoes{
-	width:150px;
-	padding-top:10px;
+.botoes {
+	width: 150px;
+	padding-top: 10px;
 	margin: 0 auto 10px;
 }
 
-#table{
-	width:400px;
-	clear: both;
-	float: right;
+#table {
+	width: 1345px;
+	margin:0 auto;
+}
+table, td, th{
+	
+	border: solid 1px #000;
+}
+td,th{
+	width:400px;	
+}
+th {
+	background-color: #999;
+}
+caption {
+	font-size: x-large;
+}
+colgroup {
+	background: #F60;
+}
+.btn {
+	border: 0px;
+	width:60px;
+	display: inline-block;
+	border-radius: 2px;
+	color: #fff;
+}
+
+.btn-danger{
+	background-color: red;
+}
+.btn-success{
+	background-color: green;
 }

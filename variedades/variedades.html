@@ -8,27 +8,48 @@
 
 	</head>
 	<body>
+		<div id="header">
 
-		<div id="form-variedade">
-			<form action="" id ="form" class="variedade-form">
-				<fieldset>
-					<legend>
-						Cadastrar variedade
-					</legend>
-					<label> Nome
-						<input type="text" name="" value="" placeholder="Nome da variedade" id="nome" required="required">
-					</label>
-					<label> Descrição						<textarea id = "descricao"cols="30" rows="10" required="required"></textarea> </label>
-					<div class="botoes">
-						<input type="submit" name="" value="Salvar" id="salvar">
-						<input type="reset" name="" value="Cancelar" id="cancelar">
-					</div>
+			<div id="init" >
+				<a  href="../index.html"> <img id="init-img" /> <label class="label">Ínicio </label> </a>
+			</div>
 
-				</fieldset>
-			</form>
+			<div id="title">
+				<h1>Proma Strawberry</h1>
+				<h2>Production Manager Strawberry</h2>
+			</div>
 		</div>
 
-		<div id="table-varidades">
+		<form action="" id ="form" class="variedade-form">
+
+			<fieldset>
+
+				<legend>
+					Cadastrar variedade
+				</legend>
+
+				<label>
+					<p class="label">
+						Nome
+					</p>
+					<input type="text" name="" value="" placeholder="Nome da variedade" id="nome" required="required">
+				</label>
+
+				<label>
+					<p class="label">
+						Descrição
+					</p> 					<textarea id = "descricao" required="required"></textarea> 
+				</label>
+
+				<div class="botoes">
+					<input type="submit" name="" value="Salvar" id="salvar">
+					<input type="reset" name="" value="Cancelar" id="cancelar">
+				</div>
+
+			</fieldset>
+		</form>
+
+		<div id="table">
 			<table id="tabela-variedades" class="tabela">
 				<caption>
 					Gerenciar variedades

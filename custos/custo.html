@@ -7,46 +7,69 @@
 		<link type="text/css" rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
-		<div id="form-custos">
-			<form id="form">
-				<fieldset>
-					<legend>
-						Cadastrar Novo Custo
-					</legend>
+		<div id="header">
 
-					<label>Nome:
-						<input type="text" id="nome" required="required" placeholder="Nome do Custo"/>
-					</label>
+			<div id="init" >
+				<a  href="../index.html"> <img id="init-img" /> <label class="label">Ínicio </label> </a>
+			</div>
 
-					<label>Valor:
-						<input type="text" id="valor" required="required" placeholder="Valor"/>
-					</label>
-
-					<input type="submit" value="Salvar" id="bt-salvar"/>
-					<input type="reset" value="Cancelar" id="bt-limpar"/>
-
-				</fieldset>
-
-			</form>
-
+			<div id="title">
+				<h1>Proma Strawberry</h1>
+				<h2>Production Manager Strawberry</h2>
+			</div>
 		</div>
+		<form id="form">
+			<fieldset>
+				<legend>
+					Cadastrar Novo Custo
+				</legend>
 
-		<div id="table-custos">
+				<label>
+					<p class="label">
+						Nome:
+					</p>
+					<input type="text" id="nome" required="required" placeholder="Nome do Custo"/>
+				</label>
+
+				<label>
+					<p class="label">
+						Valor:
+					</p>
+					<input type="text" id="valor" required="required" placeholder="Valor"/>
+				</label>
+
+				<div class="botoes">
+					<input type="submit" name="" value="Salvar" id="salvar">
+					<input type="reset" name="" value="Cancelar" id="cancelar">
+				</div>
+
+			</fieldset>
+
+		</form>
+
+		<div id="table">
 			<table id="tabela-custos" class="tabela">
-		<caption>Gerenciar custos</caption>
-		<thead>
-			<tr>
-				<th>Nome</th>
-				<th>Valor</th>
-				<th>Ações</th>
-			</tr>
-		</thead>
-		<tbody></tbody>
-	</table>
+				<caption>
+					Gerenciar custos
+				</caption>
+				<thead>
+					<tr>
+						<th>Nome</th>
+						<th>Valor</th>
+						<th>Ações</th>
+					</tr>
+				</thead>
+				<tbody></tbody>
+			</table>
 		</div>
-		<div>
-			Total
-			<input type="text" id="total" disabled="disabled" name="" value="" placeholder="">
+		<div id="div-total">
+			<label>
+				<p class="label">
+					Total
+				</p>
+				<input type="text" id="total" disabled="disabled" name="" value="" placeholder="">
+			</label>
+
 		</div>
 
 		<script type="text/javascript" src="js/CustoDAO.js"></script>
