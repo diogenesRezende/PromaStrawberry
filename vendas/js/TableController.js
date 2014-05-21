@@ -14,11 +14,11 @@ var TableController = {
 			    row = TableController.createNewRow(),
 			    index = 0;
 			
-			row.cells[index++].innerHTML = item.nome;
-			row.cells[index++].innerHTML = item.cidade;
-			row.cells[index++].innerHTML = item.bairro;
-			row.cells[index++].innerHTML = item.celular;
-			row.cells[index++].innerHTML = item.celular2;
+			row.cells[index++].innerHTML = item.date;
+			row.cells[index++].innerHTML = item.comprador;
+			row.cells[index++].innerHTML = item.quantidade;
+			row.cells[index++].innerHTML = item.preco;
+			row.cells[index++].innerHTML = item.produtor;
 			TableController.createActions(row.cells[index++], item, editCallback, deleteCallback);
 
 			tbody.appendChild(row);
@@ -53,24 +53,24 @@ var TableController = {
 		    deleteElement = document.createElement("span");
 
 		editElement.innerHTML = "Edit";
-		editElement.setAttribute("data-nome", item.nome);
+		editElement.setAttribute("data-date", item.date);
 		editElement.className = "btn btn-success";
 
 		deleteElement.innerHTML = "Delete";
-		deleteElement.setAttribute("data-nome", item.nome);
+		deleteElement.setAttribute("data-date", item.date);
 		deleteElement.className = "btn btn-danger";
 
 		if(editCallback) {
 			editElement.onclick = function(){
-				var nome = editElement.getAttribute('data-nome');
-				editCallback(nome);
+				var date = editElement.getAttribute('data-date');
+				editCallback(date);
 			};
 		}
 
 		if(deleteCallback) {
 			deleteElement.onclick = function(){
-				var nome = deleteElement.getAttribute('data-nome');
-				deleteCallback(nome, deleteElement);
+				var date = deleteElement.getAttribute('data-date');
+				deleteCallback(date,deleteElement);
 			};
 		}
 

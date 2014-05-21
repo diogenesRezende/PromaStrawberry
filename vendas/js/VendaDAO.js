@@ -1,61 +1,61 @@
 /* JavaScript Document */
 
-var ProdutorDAO = {
+var VendaDAO = {
 
-	DB_KEY: "produtores",
+	DB_KEY: "vendas",
 	NEW: 1,
-	UPDATE: 2,
+	UPdate: 2,
 
 	list: [], 
 
-	save: function(produtor, tableController) {
-		var list  = ProdutorDAO.list,
-		    index = ProdutorDAO.getIndex(produtor);
+	save: function(venda, tableController) {
+		var list  = VendaDAO.list,
+		    index = VendaDAO.getIndex(venda);
 		
 		if(index > -1) {
-			list[index] = produtor;
-			ProdutorDAO.serializeAndSave();
-			return ProdutorDAO.UPDATE;
+			list[index] = venda;
+			VendaDAO.serializeAndSave();
+			return VendaDAO.UPdate;
 		}
 		else {
-			list.push(produtor);
+			list.push(venda);
 			if(tableController) {
-				tableController.addItem(produtor);
+				tableController.addItem(venda);
 			}
 		}
 		
-		ProdutorDAO.serializeAndSave();
+		VendaDAO.serializeAndSave();
 
-		return ProdutorDAO.NEW;
+		return VendaDAO.NEW;
 	},
 
 	retrieve: function() {
-		var list = ProdutorDAO.list;
+		var list = VendaDAO.list;
 		if(list && list.length > 0) {
 			return list;
 		}
 		return null;
 	},
 
-	get: function(nome) {
-		var list  = ProdutorDAO.list,
-		    index = ProdutorDAO.getIndex({'nome': nome});
+	get: function(date) {
+		var list  = VendaDAO.list,
+		    index = VendaDAO.getIndex({'date': date});
 
 		if (index > -1) {
-			var produtor = list[index];
-			return produtor;
+			var venda = list[index];
+			return venda;
 		}
 
 		return null;
 	},
 
-	getIndex: function(produtor) {
-		var list = ProdutorDAO.list,
+	getIndex: function(venda) {
+		var list = VendaDAO.list,
 		    item = {};
 
 		for (var i = 0; i < list.length; i++) {
 			item = list[i];
-			if(item.nome == produtor.nome) {
+			if(item.date == venda.date) {
 				return i;
 			}
 		}
@@ -63,13 +63,13 @@ var ProdutorDAO = {
 		return -1;
 	},
 
-	delete: function(nome) {
-		var list  = ProdutorDAO.list,
-		    index = ProdutorDAO.getIndex({'nome': nome});
+	delete: function(venda) {
+		var list  = VendaDAO.list,
+		    index = VendaDAO.getIndex(venda);
 
 		if (index > -1) {
 			list.splice(index, 1);
-			ProdutorDAO.serializeAndSave();
+			VendaDAO.serializeAndSave();
 			return true;
 		}
 
@@ -77,20 +77,20 @@ var ProdutorDAO = {
 	},
 
 	serializeAndSave: function() {
-		var list = ProdutorDAO.list;
+		var list = VendaDAO.list;
 		if(list && list.length > 0) {
-			var json = JSON.stringify(ProdutorDAO.list);
-			window.localStorage.setItem(ProdutorDAO.DB_KEY, json);
+			var json = JSON.stringify(VendaDAO.list);
+			window.localStorage.setItem(VendaDAO.DB_KEY, json);
 		}
 	},
 
 	unserializeAndParse: function() {
-		var json = window.localStorage.getItem(ProdutorDAO.DB_KEY);
+		var json = window.localStorage.getItem(VendaDAO.DB_KEY);
 		if(json) {
-			ProdutorDAO.list = JSON.parse(json);
+			VendaDAO.list = JSON.parse(json);
 		}
 		else {
-			ProdutorDAO.list = [];
+			VendaDAO.list = [];
 		}
 	}
 

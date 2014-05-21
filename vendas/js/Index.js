@@ -4,75 +4,73 @@ var Index = {
 
 	init: function() {
 		Index.setForm();
-		Index.listProdutores();
+		Index.listVendas();
+		// ListController.loadSelects();
 	},
 
 	setForm: function() {
 		var form = document.getElementById('form');
 		if(form) {
 			form.onsubmit = function() {
-				Index.saveProdutor(form);
+				Index.saveVenda(form);
 				return false;
 			};
 		}
 	},
 
-	saveProdutor: function(form) {
-		var produtor = {};
-		produtor.nome  = form.nome.value;
-		produtor.cidade = form.cidade.value;
-		produtor.bairro = form.bairro.value;
-		produtor.rua = form.rua.value;
-		produtor.numero = form.numero.value;
-		produtor.celular = form.celular.value;
-		produtor.celular2 = form.celular2.value;
+	saveVenda: function(form) {
+		var venda = {};
+		venda.produtor  = form.listProdutor.value;
+		venda.comprador = form.listComprador.value;
+		venda.date = form.date.value;
+		venda.quantidade = form.quantidade.value;
+		venda.variedade = form.listVariedade.value;
+		venda.preco = form.preco.value;
 		
-		if(ProdutorDAO.save(produtor) == ProdutorDAO.NEW) {
-			TableController.addItem(produtor, Index.edit, Index.delete);
+		if(VendaDAO.save(venda) == VendaDAO.NEW) {
+			TableController.addItem(venda, Index.edit, Index.delete);
 		}
 		else {
 			TableController.clearList();
-			Index.listProdutores();
+			Index.listVendas();
 		}
 
-		form.nome.value = form.cidade.value = form.bairro.value = form.rua.value = form.numero.value = form.celular.value = form.celular2.value = "";
+		form.quantidade.value = form.listComprador.value = form.listVariedade.value = form.date.value = form.listProdutor.value = form.preco.value = "";
 	},
 
 	setTable: function() {
-		var table = document.getElementById('tabela-produtores');
+		var table = document.getElementById('tabela-vendas');
 		TableController.setTable(table);
 	},
 
-	listProdutores: function() {
+	listVendas: function() {
 		Index.setTable();
-		var produtorList = ProdutorDAO.retrieve();
-		if (produtorList && produtorList.length) {
-			TableController.addList(produtorList, Index.edit, Index.delete);
+		var vendaList = VendaDAO.retrieve();
+		if (vendaList && vendaList.length) {
+			TableController.addList(vendaList, Index.edit, Index.delete);
 		}
 	}, 
 
-	edit: function(nome) {
-		if(confirm("Você deseja editar o produtor " + nome + " ?")) {
-			var produtor = ProdutorDAO.get(nome);
-			if (produtor) {
+	edit: function(venda) {
+		if(confirm("Você deseja editar a venda de" + venda + " ?")) {
+			var venda = VendaDAO.get(venda);
+			if (venda) {
 				var form = document.getElementById('form');
-				form.nome.value  = produtor.nome;
-				form.cidade.value = produtor.cidade;
-				form.bairro.value = produtor.bairro;
-				form.rua.value = produtor.rua;
-				form.numero.value = produtor.numero;
-				form.celular.value = produtor.celular;
-				form.celular2.value = produtor.celular2;
-				form.telefone.value = produtor.telefone;
+				form.listProdutor.value  = venda.produtor;
+				form.listComprador.value = venda.comprador;
+				form.date.value = venda.date;
+				form.quantidade.value = venda.quantidade;
+				form.listVariedade.value = venda.variedade;
+				form.preco.value = venda.preco;
 			}
 		}
 	},
 
-	delete: function(nome, element) {
-		if(confirm("Você deseja deletar o produtor " + nome + " ?")) {
-			var produtor = ProdutorDAO.get(nome);
-			if (produtor) {
-				if(ProdutorDAO.delete(nome)) {
+	delete: function(venda, element) {
+		if(confirm("Você deseja deletar a venda de " + venda + " ?")) {
+			var venda = VendaDAO.get(venda);
+			if (venda) {
+				if(VendaDAO.delete(venda)) {
 					var row = element.parentNode.parentNode;
 					row.parentNode.removeChild(row);
 				}
@@ -82,5 +80,5 @@ var Index = {
 };
 
 //initialization
-ProdutorDAO.unserializeAndParse();
+VendaDAO.unserializeAndParse();
 Index.init();
