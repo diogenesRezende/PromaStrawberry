@@ -1,3 +1,11 @@
+* {
+    cursor: url(../../css/img/cursor.png),auto;
+  padding: 0px;
+  border: 0px;
+}
+
+/*
+
 .btn-success {
   color: #ffffff;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
@@ -41,4 +49,4 @@
 .btn-danger:active,
 .btn-danger.active {
   background-color: #942a25 \9;
-}
+}*/
