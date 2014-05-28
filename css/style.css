@@ -3,6 +3,7 @@
 
 /*fazendo reset de margin e padding da pagina toda*/
 * {
+	cursor: url(img/cursor.png),auto;
 	margin: 0;
 	padding: 0;
 }
