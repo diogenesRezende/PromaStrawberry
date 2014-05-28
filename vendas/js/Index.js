@@ -5,7 +5,7 @@ var Index = {
 	init: function() {
 		Index.setForm();
 		Index.listVendas();
-		// ListController.loadSelects();
+		ListController.loadSelects();
 	},
 
 	setForm: function() {
