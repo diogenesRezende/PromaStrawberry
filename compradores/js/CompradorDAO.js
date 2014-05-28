@@ -34,7 +34,7 @@ var CompradorDAO = {
 		if(list && list.length > 0) {
 			return list;
 		}
-		alert("deu null!");
+		return null;
 	},
 
 	get: function(nome) {

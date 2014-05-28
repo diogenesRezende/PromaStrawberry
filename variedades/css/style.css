@@ -22,7 +22,7 @@ body {
 	font-family: 'Homenaje', sans-serif;
 	color: black;
 }
-a {
+a{
 	text-decoration: none;
 	color: black;
 }
@@ -55,12 +55,13 @@ a {
 }
 
 #form {
-	width: 48%;
+	width: 53%;
 	padding: 10px;
-	margin: 0 auto
+	margin: 0 auto;
 }
 
-input[type=text] {
+input[type=text],
+textarea{
 	display: block;
 	margin: 0 auto;
 	width: 180px;
@@ -76,7 +77,7 @@ label {
 	width: 300px;
 	display: inline-block;
 	padding-top: 20px;
-	margin-left: 10px;
+	margin-left: 6.3px;
 }
 .label {
 	width: 60px;
@@ -94,14 +95,14 @@ input[type=submit], input[type=reset] {
 
 #table {
 	width: 1345px;
-	margin: 0 auto;
+	margin:0 auto;
 }
-table, td, th {
-
+table, td, th{
+	
 	border: solid 1px #000;
 }
-td, th {
-	width: 400px;
+td,th{
+	width:400px;	
 }
 th {
 	background-color: #999;
@@ -114,14 +115,15 @@ colgroup {
 }
 .btn {
 	border: 0px;
-	width: 60px;
+	width:60px;
 	display: inline-block;
 	border-radius: 2px;
 	color: #fff;
 }
-.btn-danger {
+
+.btn-danger{
 	background-color: red;
 }
-.btn-success {
+.btn-success{
 	background-color: green;
 }

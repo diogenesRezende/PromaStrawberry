@@ -1,88 +1,131 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<title>Vendas</title>
-		<link type="text/css" rel="stylesheet" href="css/style.css">
-	</head>
-	<body>
-		<div id="form-venda">
-			<form id="form">
-				<fieldset>
-					<legend>
-						Realizar venda
-					</legend>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Vendas</title>
+	<link type="text/css" rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div id="header">
 
-					<fieldset>
-						<legend>Dados pessoais</legend>
-						<label>
-							<select id="listProdutor" required="required">
-								<option selected="disabled" value="" >Produtor</option>
-								<option value="Maria do Carmo">Maria do Carmo</option>
-							</select>
-						</label>
-						<label>
-							<select id="listComprador" required="required">
-								<option value="" selected="disabled" >Comprador</option>
-								<!-- <option value="Gilberto">Gilberto</option>
-								<option value="Pantera">Pantera</option> -->
-							</select>
-						</label>
-						<label>
-							<input type="date" name="" id="date" value="new Date()" placeholder="" required="required">
-						</label>
-					</fieldset>
-					<fieldset>
-						<legend>Dados da Venda</legend>
-						<label>
-							Quantidade
-						<input type="number" id="quantidade" name="" value="" placeholder="" min="1" max="999">
-						</label>
-						<label>
-							<select id="listVariedade">
-								<option value="" selected="disabled" >Variedade</option>
-								<!-- <option value="Oso Grande">Oso Grande</option>
-								<option value="Camarosa">Camarosa</option> -->
-							</select>
-						</label>
-						<label>
-							Preço
-							<input type="number" id="preco" name="" value="" placeholder="" required="required" step="0.05" min="0" >
-						</label>
-					</fieldset>
-
-					<input type="submit" value="Salvar" id="bt-salvar"/>
-					<input type="reset" value="Cancelar" id="bt-limpar"/>
-
-				</fieldset>
-
-			</form>
-
+		<div id="init" >
+			<a  href="../index.html"> <img id="init-img" /> <label class="label">Ínicio </label> </a>
 		</div>
 
-		<div id="table-vendas">
-			<table id="tabela-vendas" class="tabela">
-		<caption>Gerenciar vendas</caption>
-		<thead>
-			<tr>
-				<th>Data</th>
-				<th>Comprador</th>
-				<th>Quantidade</th>
-				<th>Preço</th>
-				<th>Produtor</th>
-				<th>Ações</th>
-			</tr>
-		</thead>
-		<tbody></tbody>
-	</table>
+		<div id="title">
+			<h1>Proma Strawberry</h1>
+			<h2>Production Manager Strawberry</h2>
 		</div>
-		<script type="text/javascript" src="../variedades/js/VariedadeDAO.js"></script>
+	</div>
+
+	<form id="form">
+		<fieldset>
+			<legend>
+				Realizar venda
+			</legend>
+
+			<fieldset class="dados">
+				<legend>
+					Dados pessoais
+				</legend>
+
+				<label>
+					<p class="label">
+						Produtor
+					</p>
+					<select class="input" id="listProdutor" required="required">
+						<option selected="disabled" value="" >Produtor</option>
+						<option value="Maria do Carmo">Maria do Carmo</option>
+					</select> 
+				</label>
+
+				<label> 
+					<p class="label">
+						Comprador
+					</p>
+
+					<select class="input" id="listComprador" required="required">
+						<option value="" selected="disabled" >Comprador</option>
+						<option value="Gilberto">Gilberto</option>
+						<option value="Pantera">Pantera</option>
+					</select>
+					
+				</label>
+
+				<label> 
+					<p class="label">
+						Data
+					</p> 
+					<input type="date" name="" id="date" value="" placeholder="" required="required">
+				</label>
+			</fieldset>
+
+			<fieldset class="dados">
+
+				<legend>
+					Dados da Venda
+				</legend>
+
+				<label>
+					<p class="label">
+						Quantidade
+					</p>
+					<input type="number" id="quantidade" name="" value="" placeholder="" min="1" max="999">
+				</label>
+
+				<label>
+					<p class="label">
+						Variedades
+					</p>
+					<select class="input" id="listVariedade">
+						<option value="" selected="disabled" >Variedade</option>
+						<option value="Oso Grande">Oso Grande</option>
+						<option value="Camarosa">Camarosa</option>
+					</select>
+				</label>
+
+				<label>
+					<p class="label">
+						Preço
+					</p>
+					<input type="number" id="preco" name="" value="" placeholder="" required="required" step="0.05" min="0" >
+				</label>
+
+			</fieldset>
+
+			<div class="botoes">
+				<input type="submit" name="" value="Salvar" id="salvar">
+				<input type="reset" name="" value="Cancelar" id="cancelar">
+			</div>
+
+		</fieldset>
+
+	</form>
+
+	<div id="table-vendas">
+		<table id="tabela-vendas" class="tabela">
+			<caption>
+				Gerenciar vendas
+			</caption>
+			<thead>
+				<tr>
+					<th>Data</th>
+					<th>Comprador</th>
+					<th>Quantidade</th>
+					<th>Preço</th>
+					<th>Produtor</th>
+					<th>Ações</th>
+				</tr>
+			</thead>
+			<tbody></tbody>
+		</table>
+	</div>
+		<!-- <script type="text/javascript" src="../variedades/js/VariedadeDAO.js"></script>
 		<script type="text/javascript" src="../produtores/js/ProdutorDAO.js"></script>
-		<script type="text/javascript" src="../compradores/js/CompradorDAO.js"></script>
-		<script type="text/javascript" src="js/ListController.js"></script>
+		<script type="text/javascript" src="../compradores/js/CompradorDAO.js"></script> -->
 		<script type="text/javascript" src="js/VendaDAO.js"></script>
 		<script type="text/javascript" src="js/TableController.js"></script>
 		<script type="text/javascript" src="js/Index.js"></script>
 	</body>
-</html>
+	</html>

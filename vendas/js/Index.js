@@ -4,29 +4,18 @@ var Index = {
 
 	init: function() {
 		Index.setForm();
-		Index.setDateToday();
 		Index.listVendas();
-		ListController.loadSelects();
+		// ListController.loadSelects();
 	},
 
 	setForm: function() {
 		var form = document.getElementById('form');
 		if(form) {
-
-			// document.getElementById('date').value = new Date().toDateInputValue();
 			form.onsubmit = function() {
 				Index.saveVenda(form);
 				return false;
 			};
 		}
-	},
-	setDateToday:function() {
-		var today = new Date();
-		var day = today.getDate();
-		var month = today.getMonth()+1;
-		var year = today.getFullYear();
-		var result = day +'-' + month+'-'+year;
-		document.getElementById("date").value = result;
 	},
 
 	saveVenda: function(form) {

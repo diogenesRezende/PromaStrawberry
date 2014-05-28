@@ -15,7 +15,6 @@ body {
 	background-size: 100%;
 	background-repeat: no-repeat;
 	font-family: 'Homenaje', sans-serif;
-	color: #1E90FF;
 }
 /*propriedades do cabeçalho*/
 #header{
@@ -33,7 +32,7 @@ body {
 /* retirando o sublinhado de todos os links do documento */
 a {
 	text-decoration: none;
-	color: #1E90FF;
+	color: black;
 }
 
 /*Aqui começa as propridades individuais das div que redirecionam
@@ -47,8 +46,6 @@ a {
 }
 #div-compradores label {
 	display: block;
-	width: 60px;
-	margin: 0 auto;
 }
 #compradores {
 	background-image: url('img/icon_compradores.png');
@@ -63,8 +60,6 @@ a {
 }
 #div-produtores label {
 	display: block;
-	width: 60px;
-	margin: 0 auto;
 }
 #produtores {
 	background-image: url('img/icon_produtores.png');
@@ -79,8 +74,6 @@ a {
 }
 #div-vendas label {
 	display: block;
-	width: 60px;
-	margin: 0 auto;
 }
 #vendas {
 	background-image: url('img/icon_vendas.png');
@@ -96,8 +89,6 @@ a {
 }
 #div-variedades label {
 	display: block;
-	width: 60px;
-	margin: 0 auto;
 }
 #variedades {
 	background-image: url('img/icon_variedades.png');
@@ -112,8 +103,6 @@ a {
 }
 #div-custos label {
 	display: block;
-	width: 60px;
-	margin: 0 auto;
 }
 #custos {
 	background-image: url('img/icon_custos.png');
@@ -128,8 +117,6 @@ a {
 }
 #div-relatorios label {
 	display: block;
-	width: 60px;
-	margin: 0 auto;
 }
 #relatorios {
 	background-image: url('img/icon_report.png');
@@ -140,5 +127,7 @@ a {
 	margin: 3px 3px 3px 3px;
 	
 }
-
+.label{
+	text-align: center;
+}
 /*FIM*/

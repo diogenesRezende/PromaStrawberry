@@ -7,65 +7,119 @@
 		<link type="text/css" rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
-		<div id="form-produtor">
-			<form id="form">
-				<fieldset>
+
+		<div id="header">
+
+			<div id="init" >
+				<a  href="../index.html"> <img id="init-img" /> <label class="label">Ínicio </label> </a>
+			</div>
+
+			<div id="title">
+				<h1>Proma Strawberry</h1>
+				<h2>Production Manager Strawberry</h2>
+			</div>
+		</div>
+
+		<form id="form">
+			<fieldset>
+				<legend>
+					Cadastrar Produtor
+				</legend>
+
+				<fieldset class="dados">
 					<legend>
-						Cadastrar Produtor
+						Dados Pessoais
 					</legend>
 
-					<label>Nome:
+					<label>
+						<p class="label">
+							Nome
+						</p>
 						<input type="text" id="nome" required="required" placeholder="Nome do Produtor"/>
 					</label>
 
-					<label>Cidade:
+					<label>
+						<p class="label">
+							Celular1
+						</p>
+						<input type="text" id="celular" required="required" placeholder="xx-xxxx-xxxx"/>
+					</label>
+
+					<label>
+						<p class="label">
+							Celular2
+						</p>
+						<input type="text" id="celular2" placeholder="xx-xxxx-xxxx"/>
+					</label>
+					
+					<label>
+						<p class="label">
+							Telefone
+						</p>
+						<input type="text" id="celular" required="required" placeholder="xx-xxxx-xxxx"/>
+					</label>
+				</fieldset>
+
+				<fieldset id="end" class="dados">
+					<legend>
+						Endereço
+					</legend>
+
+					<label>
+						<p class="label">
+							Cidade
+						</p>
 						<input type="text" id="cidade" required="required" placeholder="Cidade"/>
 					</label>
 
-					<label>Bairro:
+					<label>
+						<p class="label">
+							Bairro
+						</p>
 						<input type="text" id="bairro" placeholder="Bairro"/>
 					</label>
 
-					<label>Rua:
+					<label>
+						<p class="label">
+							Rua
+						</p>
 						<input type="text"  id="rua" placeholder="Rua"/>
 					</label>
 
-					<label>Número:
+					<label>
+						<p class="label">
+							Número
+						</p>
 						<input type="text" id="numero" placeholder="Número"/>
 					</label>
-
-					<label>Celular1:
-						<input type="text" id="celular" required="required" placeholder="Celular"/>
-					</label>
-
-					<label>Celular2:
-						<input type="text" id="celular2" placeholder="Celular2"/>
-					</label>
-
-					<input type="submit" value="Salvar" id="bt-salvar"/>
-					<input type="reset" value="Cancelar" id="bt-limpar"/>
-
 				</fieldset>
 
-			</form>
+				<div class="botoes">
+					<input type="submit" name="" value="Salvar" id="salvar">
+					<input type="reset" name="" value="Cancelar" id="cancelar">
+				</div>
 
-		</div>
+			</fieldset>
+
+		</form>
 
 		<div id="table-produtor">
 			<table id="tabela-produtores" class="tabela">
-		<caption>Gerenciar produtores</caption>
-		<thead>
-			<tr>
-				<th>Nome</th>
-				<th>Cidade</th>
-				<th>Bairro</th>
-				<th>Celular</th>
-				<th>Celular 2</th>
-				<th>Ações</th>
-			</tr>
-		</thead>
-		<tbody></tbody>
-	</table>
+				<caption>
+					Gerenciar produtores
+				</caption>
+				<thead>
+					<tr>
+						<th>Nome</th>
+						<th>Cidade</th>
+						<th>Bairro</th>
+						<th>Celular</th>
+						<th>Celular 2</th>
+						<th>Ações</th>
+					</tr>
+				</thead>
+				<tbody></tbody>
+			</table>
 		</div>
 
 		<script type="text/javascript" src="js/ProdutorDAO.js"></script>

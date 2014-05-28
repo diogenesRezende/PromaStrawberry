@@ -9,73 +9,92 @@
 	</head>
 	<body>
 		<div id="header">
-			<h1>Proma Strawberry</h1>
-			<h2>Production Manager Strawberry</h2>
+
+			<div id="init" >
+				<a  href="../index.html"> <img id="init-img" /> <label class="label">Ínicio </label> </a>
+			</div>
+
+			<div id="title">
+				<h1>Proma Strawberry</h1>
+				<h2>Production Manager Strawberry</h2>
+			</div>
 		</div>
 
 		<form action="" id ="form" class="comprador-form">
 			<fieldset>
 
 				<legend>
-					Cadastrar comprador
+					Cadastrar Compradores
 				</legend>
 
-				<label>
-					<p class="label">
-						Nome
-					</p>
-					<input type="text" placeholder="Nome do comprador" id="nome" required="required">
-				</label>
+				<fieldset class="dados">
+					<legend>
+						Dados Pessoais
+					</legend>
+					<label>
+						<p class="label">
+							Nome
+						</p>
+						<input type="text" placeholder="Nome do comprador" id="nome" required="required">
+					</label>
 
-				<label>
-					<p class="label">
-						Cidade
-					</p>
-					<input type="text" placeholder="Nome da cidade" id="cidade" required="required">
-				</label>
+					<label>
+						<p class="label">
+							Celular
+						</p>
+						<input type="text" id="celular" name="" value="" placeholder="xx-xxxx-xxxx" required="required">
+					</label>
 
-				<label>
-					<p class="label">
-						Bairro
-					</p>
-					<input type="text" id="bairro" placeholder="Nome do bairro">
-				</label>
+					<label>
+						<p class="label">
+							Celular2
+						</p>
+						<input type="text" id="celular2" placeholder="Celular 2 ">
+					</label>
 
-				<label>
-					<p class="label">
-						Rua
-					</p>
-					<input type="text" id="rua" placeholder="Nome da rua">
-				</label>
+					<label>
+						<p class="label">
+							Telefone
+						</p>
+						<input type="text" id="telefone" placeholder="Telefone">
+					</label>
+				</fieldset>
 
-				<label>
-					<p class="label">
-						nº
-					</p>
-					<input type="text" id="numero" name="" value="" placeholder="Número da residência">
-				</label>
+				<fieldset  class="dados">
+					<legend>
+						Endereço
+					</legend>
 
-				<label>
-					<p class="label">
-						Celular
-					</p>
-					<input type="text" id="celular" name="" value="" placeholder="xx-xxxx-xxxx" required="required">
-				</label>
+					<label>
+						<p class="label">
+							Cidade
+						</p>
+						<input type="text" placeholder="Nome da cidade" id="cidade" required="required">
+					</label>
 
-				<label>
-					<p class="label">
-						Celular 2
-					</p>
-					<input type="text" id="celular2" placeholder="Celular 2 ">
-				</label>
+					<label>
+						<p class="label">
+							Bairro
+						</p>
+						<input type="text" id="bairro" placeholder="Nome do bairro">
+					</label>
 
-				<label>
-					<p class="label">
-						Telefone
-					</p>
-					<input type="text" id="telefone" placeholder="Telefone">
-				</label>
+					<label>
+						<p class="label">
+							Rua
+						</p>
+						<input type="text" id="rua" placeholder="Nome da rua">
+					</label>
 
+					<label>
+						<p class="label">
+							Número
+						</p>
+						<input type="text" id="numero" name="" value="" placeholder="Número da residência">
+					</label>
+
+				</fieldset>
+				
 				<div class="botoes">
 					<input type="submit" name="" value="Salvar" id="salvar">
 					<input type="reset" name="" value="Cancelar" id="cancelar">
