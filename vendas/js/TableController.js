@@ -18,6 +18,7 @@ var TableController = {
 			row.cells[index++].innerHTML = item.comprador;
 			row.cells[index++].innerHTML = item.quantidade;
 			row.cells[index++].innerHTML = item.preco;
+			row.cells[index++].innerHTML = item.preco * item.quantidade;
 			row.cells[index++].innerHTML = item.produtor;
 			TableController.createActions(row.cells[index++], item, editCallback, deleteCallback);
 
@@ -39,6 +40,7 @@ var TableController = {
 	
 	createNewRow: function() {
 		var row = document.createElement('tr');
+		row.appendChild(document.createElement('td'));
 		row.appendChild(document.createElement('td'));
 		row.appendChild(document.createElement('td'));
 		row.appendChild(document.createElement('td'));

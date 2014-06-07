@@ -57,7 +57,7 @@
 					<p class="label">
 						Data
 					</p> 
-					<input type="date" name="" id="date" value="" placeholder="" required="required">
+					<input type="date" name="" id="date" min="01/01/1970" value="23/05/2014" placeholder="xx/xx/xxxx" required="required">
 				</label>
 			</fieldset>
 
@@ -66,14 +66,7 @@
 				<legend>
 					Dados da Venda
 				</legend>
-
-				<label>
-					<p class="label">
-						Quantidade
-					</p>
-					<input type="number" id="quantidade" name="" value="" placeholder="" min="1" max="999">
-				</label>
-
+				
 				<label>
 					<p class="label">
 						Variedades
@@ -83,6 +76,13 @@
 						<!-- <option value="Oso Grande">Oso Grande</option>
 						<option value="Camarosa">Camarosa</option> -->
 					</select>
+				</label>
+
+				<label>
+					<p class="label">
+						Quantidade
+					</p>
+					<input type="number" id="quantidade" name="" value="" placeholder="" min="1" max="999">
 				</label>
 
 				<label>
@@ -116,6 +116,7 @@
 					<th>Comprador</th>
 					<th>Quantidade</th>
 					<th>Preço</th>
+					<th>Total</th>
 					<th>Produtor</th>
 					<th>Ações</th>
 				</tr>

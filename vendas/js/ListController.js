@@ -11,6 +11,9 @@ setVariedade: function() {
 			selectVariedade.add(option);
 		};	
 	}
+	if(list.length == 1){
+		selectVariedade.value = list[0].nome;
+	}
 	
 },
 setComprador: function() {
@@ -24,6 +27,9 @@ setComprador: function() {
 			selectComprador.add(option);
 		};	
 	}
+	if(list.length == 1){
+		selectComprador.value = list[0].nome;
+	}
 },
 setProdutor:function() {
 	ProdutorDAO.unserializeAndParse();
@@ -35,6 +41,9 @@ setProdutor:function() {
 			option.text = list[i].nome;
 			selectProdutor.add(option);
 		};	
+	}
+	if(list.length == 1){
+		selectProdutor.value = list[0].nome;
 	}
 },
 loadSelects: function() {

@@ -40,23 +40,23 @@
 
 					<label>
 						<p class="label">
-							Celular1
+							Celular
 						</p>
-						<input type="text" id="celular" required="required" placeholder="(xx) xxxx-xxxx" pattern="\(\d{2}\)\ \d{4}\-\d{4}"/>
+						<input type="text" id="celular" required="required" placeholder="xx xxxx-xxxx" pattern="\d{2}\ \d{4}\-\d{4}" onkeypress="Index.mascara(this, '## ####-####')" maxlength="12" />
 					</label>
 
 					<label>
 						<p class="label">
 							Celular2
 						</p>
-						<input type="text" id="celular2" placeholder="(xx) xxxx-xxxx" pattern="\(\d{2}\)\ \d{4}\-\d{4}"/>
+						<input type="text" id="celular2" placeholder="xx xxxx-xxxx" pattern="\d{2}\ \d{4}\-\d{4}" onkeypress="Index.mascara(this, '## ####-####')" maxlength="12"/>
 					</label>
 					
 					<label>
 						<p class="label">
 							Telefone
 						</p>
-						<input type="text" id="celular" required="required" placeholder="(xx) xxxx-xxxx" pattern="\(\d{2}\)\ \d{4}\-\d{4}"/>
+						<input type="text" id="telefone" placeholder="xx xxxx-xxxx" pattern="\d{2}\ \d{4}\-\d{4}" onkeypress="Index.mascara(this, '## ####-####')" maxlength="12"/>
 					</label>
 				</fieldset>
 
