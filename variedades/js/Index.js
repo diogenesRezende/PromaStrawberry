@@ -20,6 +20,7 @@ var Index = {
 	saveVariedade: function(form) {
 		var variedade = {};
 		variedade.nome  = form.nome.value;
+		variedade.ano = form.ano.value;
 		variedade.descricao = form.descricao.value;
 		
 		if(VariedadeDAO.save(variedade) == VariedadeDAO.NEW) {
@@ -30,7 +31,7 @@ var Index = {
 			Index.listVariedades();
 		}
 
-		form.nome.value = form.descricao.value = "";
+		form.nome.value = form.descricao.value = form.ano.value = "";
 	},
 
 	setTable: function() {
@@ -52,6 +53,7 @@ var Index = {
 			if (variedade) {
 				var form = document.getElementById('form');
 				form.nome.value  = variedade.nome;
+				form.ano.value = variedade.ano;
 				form.descricao.value = variedade.descricao;
 			}
 		}

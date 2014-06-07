@@ -1,6 +1,6 @@
 * {
-	cursor: url(../../css/img/cursor.png), auto;
-	padding: 0px;
+/*	cursor: url(../../css/img/cursor.png), auto;
+*/	padding: 0px;
 	border: 0;
 }
 
@@ -60,7 +60,7 @@ a{
 	margin: 0 auto;
 }
 
-input[type=text] {
+input[type=text],input[type=number] {
 	display: block;
 	margin: 0 auto;
 	width: 180px;

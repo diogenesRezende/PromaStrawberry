@@ -25,7 +25,7 @@
 			<fieldset>
 
 				<legend>
-					Cadastrar variedade
+					Cadastrar lavoura
 				</legend>
 
 				<label>
@@ -33,6 +33,13 @@
 						Nome
 					</p>
 					<input type="text" name="" value="" placeholder="Nome da variedade" id="nome" required="required">
+				</label>
+				<label>
+					<p class="label">
+					Ano
+					</p>
+					<input type="tel" name="" value="" placeholder="">
+					<input type="number" min="2014" max="2097" required="required" id="ano" name="" value="" placeholder="Ano da lavoura">
 				</label>
 
 				<label>
@@ -52,11 +59,12 @@
 		<div id="table">
 			<table id="tabela-variedades" class="tabela">
 				<caption>
-					Gerenciar variedades
+					Gerenciar lavouras
 				</caption>
 				<thead>
 					<tr>
 						<th>Nome</th>
+						<th>Ano</th>
 						<th>Descrição</th>
 						<th>Ações</th>
 					</tr>
