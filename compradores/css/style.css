@@ -1,16 +1,7 @@
 * {
-/*	cursor: url(../../css/img/cursor.png), auto;
-*/	padding: 0px;
-	border: 0;
-}
-
-/*fazendo imports da letras que serão usadas*/
-/*@import url(http://fonts.googleapis.com/css?family=Homenaje);
-*/
-/*fazendo reset de margin e padding da pagina toda*/
-* {
 	margin: 0;
 	padding: 0;
+	border: 0;
 }
 /* definindo background para a página isso foi feito inicialmente nessa pagina
  mas vai ser usado em todas as outras
@@ -19,10 +10,10 @@ body {
 	background-image: url('img/selected.gif');
 	background-size: 100%;
 	background-repeat: no-repeat;
-	font-family: 'Homenaje', sans-serif;
+	font-family: 'Verdana', sans-serif;
 	color: black;
 }
-a{
+a {
 	text-decoration: none;
 	color: black;
 }
@@ -36,31 +27,35 @@ a{
 }
 #init {
 	clear: both;
-	display: inline-block;
 	margin-left: 5px;
 }
 #title {
-	width: 94.5%;
-	display: inline-block;
+	width: 92%;
 	text-align: center;
+}
+#init, #title {
+	display: inline-block;
 }
 #init label {
 	display: block;
+	cursor: pointer;
 }
-#init-img {
-	background-image: url('img/icon_init.png');
-	background-repeat: no-repeat;
+#init:hover {
+	background-image: url('img/shadow-c.png');
+}
+#init img {
 	width: 48px;
 	height: 48px;
+	margin: 5px;
 }
 
 #form {
-	width: 53%;
+	width: 635px;
 	padding: 10px;
 	margin: 0 auto;
 }
 
-input[type=text],input[type=number] {
+input[type=text], input[type=number] {
 	display: block;
 	margin: 0 auto;
 	width: 180px;
@@ -79,7 +74,7 @@ label {
 	margin-left: 6.3px;
 }
 .label {
-	width: 60px;
+	width: 90px;
 	margin: 0 auto;
 }
 input[type=submit], input[type=reset] {
@@ -94,14 +89,14 @@ input[type=submit], input[type=reset] {
 
 #table {
 	width: 1345px;
-	margin:0 auto;
+	margin: 0 auto;
 }
-table, td, th{
-	
+table, td, th {
+
 	border: solid 1px #000;
 }
-td,th{
-	width:400px;	
+td, th {
+	width: 400px;
 }
 th {
 	background-color: #999;
@@ -114,15 +109,17 @@ colgroup {
 }
 .btn {
 	border: 0px;
-	width:60px;
+	width: 60px;
 	display: inline-block;
 	border-radius: 2px;
 	color: #fff;
+	padding-left:7px;
 }
 
-.btn-danger{
+.btn-danger {
+	
 	background-color: red;
 }
-.btn-success{
+.btn-success {
 	background-color: green;
 }
