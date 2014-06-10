@@ -1,9 +1,7 @@
 /*fazendo imports da letras que serão usadas*/
-/*@import url(http://fonts.googleapis.com/css?family=Homenaje);
-*/
+
 /*fazendo reset de margin e padding da pagina toda*/
 * {
-	/*cursor: url(img/cursor.png),auto;*/
 	margin: 0;
 	padding: 0;
 }
@@ -13,8 +11,8 @@
 body {
 	background-image: url('img/selected.gif');
 	background-size: 100%;
-	background-repeat: no-repeat;
-	font-family: 'Homenaje', sans-serif;
+	background-repeat: repeat-x;
+	font-family: 'Verdana', sans-serif;
 }
 /*propriedades do cabeçalho*/
 #header{
@@ -26,7 +24,7 @@ body {
 }
 /*propriedades do menu de navegação*/
 #nav {
-	width: 75%;	
+	width: 100%;	
 	margin: 12px auto;
 }
 /* retirando o sublinhado de todos os links do documento */
@@ -35,113 +33,23 @@ a {
 	color: black;
 }
 
-/*Aqui começa as propridades individuais das div que redirecionam
- *  para outra paginas
- */
-
-/*Propriedades da div compradores*/
-#div-compradores {
-	clear: both;
-	display: inline-block;
-}
-#div-compradores label {
-	display: block;
-}
-#compradores {
-	background-image: url('img/icon_compradores.png');
-	width: 128px;
-	height: 128px;
+img{
+	width: 107px;
+	height: 107px;
 }
 
-/*Propriedades da div produtores*/
-#div-produtores {
-	clear: both;
-	display: inline-block;
-}
-#div-produtores label {
-	display: block;
-}
-#produtores {
-	background-image: url('img/icon_produtores.png');
-	width: 128px;
-	height: 128px;
-}
-
-/*Propriedades da div produtores*/
-#div-vendas {
-	clear: both;
-	display: inline-block;
-}
-#div-vendas label {
-	display: block;
-}
-#vendas {
-	background-image: url('img/icon_vendas.png');
-	width: 128px;
-	height: 128px;
-}
-
-/*Propriedades da div variedades de morango*/
-
-#div-variedades {
-	clear: both;
-	display: inline-block;
-}
-#div-variedades label {
-	display: block;
-}
-#variedades {
-	background-image: url('img/icon_variedades.png');
-	width: 128px;
-	height: 128px;
-}
-
-/*Propriedades da div custos*/
-#div-custos {
-	clear: both;
-	display: inline-block;
-}
-#div-custos label {
-	display: block;
-}
-#custos {
-	background-image: url('img/icon_custos.png');
-	width: 128px;
-	height: 128px;
-}
-
-/*Propriedades da div relatórios*/
-#div-relatorios {
-	clear: both;
-	display: inline-block;
-}
-#div-relatorios label {
-	display: block;
-}
-#relatorios {
-	background-image: url('img/icon_report.png');
-	width: 128px;
-	height: 128px;
-}
-
-/*Propriedades da div relatórios*/
-#div-manual {
-	clear: both;
-	display: inline-block;
-}
-#div-manual label {
-	display: block;
-}
-#manual {
-	background-image: url('img/icon_manual.jpg');
-	background-size:100%;
-	background-repeat: no-repeat;
-	width: 128px;
-	height: 128px;
-}
 .menu{
 	margin: 3px 3px 3px 3px;
+	clear: both;
+	display: inline-block;
 	
+}
+.menu label{
+	display: block;
+	cursor: pointer;
+}
+.menu:hover{
+	background-image: url('img/shadow-c.png');
 }
 .label{
 	text-align: center;
